@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:8 as react-build
+FROM node:14 as react-build
 WORKDIR /builddir
 COPY . ./
 RUN npm install
