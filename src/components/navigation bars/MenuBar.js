@@ -30,7 +30,7 @@ class MenuBar extends React.Component {
 
     render(){
         return(
-            <div class="menubar">
+            <div className="menubar">
                  {this.state.presets.length ? (
                     <PresetList presets={this.state.presets} getPresetInfo={this.getPresetinfo}/>
                 ) : (

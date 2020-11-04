@@ -7,8 +7,8 @@ class MainPage extends React.Component {
             <div>
                 <NavBar/>
                 <MenuBar/>
-                <div class="main">
-                    <div class="content">
+                <div className="main">
+                    <div className="content">
                        
                     </div>
                     <div id="welcome">
