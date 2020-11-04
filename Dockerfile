@@ -1,18 +1,15 @@
-FROM node:15-alpine as build
-
-WORKDIR /app
+# Stage 1
+FROM node:8 as react-build
+WORKDIR /builddir
 COPY . ./
-
 RUN npm install
 RUN npm install react-scripts@latest -g
 RUN npm run build
 
-FROM nginx:1.16.0-alpine
+
+# Stage 2 - the production environment
+FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-build /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-
-
+COPY --from=react-build /builddir/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
