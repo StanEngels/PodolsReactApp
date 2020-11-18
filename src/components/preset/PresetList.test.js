@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import PresetList from './PresetList';
 
-test('renders preset list', () => {
+test('render preset list', () => {
     var presets = [{
         id: 1,
         accountId: 1,
@@ -11,5 +11,4 @@ test('renders preset list', () => {
     render(<PresetList presets={presets}/>);
     const linkElement = screen.getByText(/React Preset Test1/);
     expect(linkElement).toBeInTheDocument();
-  });
-  
+});
