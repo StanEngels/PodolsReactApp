@@ -5,7 +5,7 @@ const PresetList = (props) => {
     return(
         <div>
             { props.presets.map(currentPreset => (
-                <div id={currentPreset.id}>
+                <div key={currentPreset.id} id={currentPreset.id}>
                     <Preset key={currentPreset.id} preset={currentPreset} getPresetInfo={props.getPresetInfo}/>
                 </div>
             ))}
