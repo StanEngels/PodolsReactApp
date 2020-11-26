@@ -11,7 +11,7 @@ class MenuBar extends React.Component {
 
     componentDidMount(){
         let mounted = true;
-    fetch(`api/Presets`)
+    fetch(`https://144.91.105:5001/api/Presets`)
     .then(res => res.json())
     .then((data) => {
       if(mounted){
