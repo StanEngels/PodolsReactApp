@@ -11,16 +11,18 @@ class MenuBar extends React.Component {
 
     componentDidMount(){
         let mounted = true;
-    fetch(`https://podolsapi.herokuapp.com/api/Presets`)
-    .then(res => res.json())
-    .then((data) => {
-      if(mounted){
-      this.setState({ presets: data })
-      }
-    })
-    .catch(console.log)
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+            targetUrl = 'https://podolsapi.herokuapp.com/api/presets'
+        fetch(proxyUrl + targetUrl)
+        .then(res => res.json())
+        .then((data) => {
+        if(mounted){
+        this.setState({presets: data})
+        }
+        })
+        .catch(console.log)
 
-    return () => mounted = false;
+        return () => mounted = false;
     }
 
     getPresetinfo = (e) => {
