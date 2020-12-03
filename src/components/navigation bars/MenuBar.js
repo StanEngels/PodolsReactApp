@@ -18,11 +18,11 @@ class MenuBar extends React.Component {
             method: 'post',
             url: 'https://cors-anywhere.herokuapp.com/https://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/protocol/openid-connect/token',
             data: qs.stringify({
-                client_id: `PodolsClient`,
-                client_secret: `665a2985-a4d1-482d-9d47-f88710832867`,
-                grant_type: `password`,
-                username: `Podols`,
-                password: `test123`
+                client_id: `${process.env.REACT_APP_AUTH_CLIENT_ID}`,
+                client_secret: `${process.env.REACT_APP_AUTH_CLIENT_SECRET}`,
+                grant_type: `${process.env.REACT_APP_AUTH_GRANT_TYPE}`,
+                username: `${process.env.REACT_APP_AUTH_USERNAME}`,
+                password: `${process.env.REACT_APP_AUTH_PASSWORD}`
             }),
             headers: {
               'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
