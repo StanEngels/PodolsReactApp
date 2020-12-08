@@ -16,7 +16,7 @@ class MenuBar extends React.Component {
         let mounted = true;
         axios({
             method: 'post',
-            url: 'https://cors-anywhere.herokuapp.com/https://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/protocol/openid-connect/token',
+            url: `${process.env.REACT_APP_KEYCLOAK_URL}`,
             data: qs.stringify({
                 client_id: `${process.env.REACT_APP_AUTH_CLIENT_ID}`,
                 client_secret: `${process.env.REACT_APP_AUTH_CLIENT_SECRET}`,
