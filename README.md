@@ -20,18 +20,12 @@ And set your clients acces type to confidential.
 
 These values come from your keycloak which we created above.
 
-`REACT_APP_API_URL = https://localhost:5001`
-
-`REACT_APP_KEYCLOAK_URL = {you keycloak link}/auth/realms/{your realm}/protocol/openid-connect/token`
-
-`REACT_APP_AUTH_CLIENT_ID = {your keycloak client ID}`
-
-`REACT_APP_AUTH_CLIENT_SECRET = {your keycloak Client secret}`
-
-`REACT_APP_AUTH_GRANT_TYPE = {your keycloak grant type}`
-
-`REACT_APP_AUTH_USERNAME = {your keycloak username}`
-
+`REACT_APP_API_URL = https://localhost:5001`\
+`REACT_APP_KEYCLOAK_URL = {you keycloak link}/auth/realms/{your realm}/protocol/openid-connect/token`\
+`REACT_APP_AUTH_CLIENT_ID = {your keycloak client ID}`\
+`REACT_APP_AUTH_CLIENT_SECRET = {your keycloak Client secret}`\
+`REACT_APP_AUTH_GRANT_TYPE = {your keycloak grant type}`\
+`REACT_APP_AUTH_USERNAME = {your keycloak username}`\
 `REACT_APP_AUTH_PASSWORD = {your keycloak user password}`
 
 ## Get the api running
