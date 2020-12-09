@@ -8,6 +8,8 @@
 
 You can find an explanation on how to read this model or the full picture of the application in the wiki or by clicking [here](https://github.com/StanEngels/PodolsReactApp/wiki/How-does-the-application-work%3F)
 
+# Installation
+
 ## Setup keycloak and a realm to work with.
 
 Here is an easy way of setting up keycloak on a docker container.\
