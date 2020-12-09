@@ -17,6 +17,10 @@ set your clients acces type to confidential.
 
 ## Add a .env file to your root with these values.
 
+These values come from your keycloak which we created above.
+
+`REACT_APP_API_URL = https://localhost:5001`
+
 `REACT_APP_KEYCLOAK_URL = {you keycloak link}/auth/realms/{your realm}/protocol/openid-connect/token`
 
 `REACT_APP_AUTH_CLIENT_ID = {your keycloak client ID}`
@@ -28,3 +32,6 @@ set your clients acces type to confidential.
 `REACT_APP_AUTH_USERNAME = {your keycloak username}`
 
 `REACT_APP_AUTH_PASSWORD = {your keycloak user password}`
+
+## Get the api running
+Open the [Api Readme](https://github.com/StanEngels/PodolsPresetApi/blob/main/README.md) and start up your api.
