@@ -30,3 +30,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Get the api running
 Open the [Api Readme](https://github.com/StanEngels/PodolsPresetApi/blob/main/README.md) and start up your api.
+
+## What to do now?
+
+When everything is up and running here are a few issues that are great for newcomers: [Click me!](https://github.com/StanEngels/PodolsReactApp/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+
+When you are more experience here is the normal issue board without filters: [Click me!](https://github.com/StanEngels/PodolsReactApp/issues)
