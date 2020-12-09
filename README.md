@@ -1,9 +1,4 @@
-# Podols React App
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Podols React App installation
 
 ## Setup keycloak and a realm to work with.
 
@@ -27,6 +22,11 @@ These values come from your keycloak which we created above.
 `REACT_APP_AUTH_GRANT_TYPE = {your keycloak grant type}`\
 `REACT_APP_AUTH_USERNAME = {your keycloak username}`\
 `REACT_APP_AUTH_PASSWORD = {your keycloak user password}`
+
+## `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Get the api running
 Open the [Api Readme](https://github.com/StanEngels/PodolsPresetApi/blob/main/README.md) and start up your api.
