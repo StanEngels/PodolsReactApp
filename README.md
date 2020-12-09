@@ -2,6 +2,8 @@
 
 ## C4 model of this repository
 
+![C4 model of this repository](https://i.imgur.com/mTl57eS.png)
+
 ## Full picture of the application
 
 You can find an explanation on how to read this model or the full picture of the application in the wiki or by clicking [here](https://github.com/StanEngels/PodolsPresetApi/wiki/How-does-the-application-work%3F)
