@@ -40,7 +40,7 @@ class MenuBar extends React.Component {
     }
 
     getPresets(){
-        axios.get(`https://cors-anywhere.herokuapp.com/https://podolsapi.herokuapp.com/api/presets`, { headers: {"Authorization" : `Bearer ${this.state.token}`} })
+        axios.get(`${process.env.REACT_APP_API_URL}/api/presets`, { headers: {"Authorization" : `Bearer ${this.state.token}`} })
         .then((data) => {
             this.setState({presets: data.data})
         })
