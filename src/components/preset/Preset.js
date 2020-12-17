@@ -1,13 +1,14 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 
 const preset = (props) => {
     return(
         <div>
             { props.preset ? (
                 <div>
-                    <button onClick={props.getPresetInfo}>
+                    <Button size="small" target="_blank"  onClick={props.getPresetInfo}>
                         {props.preset.presetName}
-                    </button>
+                    </Button>
                 </div>
             ) : null}
         </div>

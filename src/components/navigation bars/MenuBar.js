@@ -2,13 +2,18 @@ import React from 'react';
 import PresetList from '../preset/PresetList';
 import axios from 'axios';
 import qs from 'query-string';
+import { Collapse, Button, SvgIcon} from '@material-ui/core';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 class MenuBar extends React.Component {
     constructor(){
         super();
         this.state={
             presets: [],
             showPresets: [],
-            token: ""
+            token: "",
+            openPreset: [true, ExpandMoreIcon],
         }
     }
 
@@ -52,15 +57,32 @@ class MenuBar extends React.Component {
         this.setState({showPresets: this.state.presets});
     }
 
+    togglePresetMenu = (e) => {
+        e.preventDefault();
+        if(this.state.openPreset[0]){
+            this.setState({openPreset: [false, ExpandLessIcon]});
+        }
+        else{
+            this.setState({openPreset: [true, ExpandMoreIcon]});
+        }
+    }
+
     render(){
         return(
             <div className="menubar">
-                Presets
-                {this.state.presets.length ? (
-                    <PresetList presets={this.state.presets} getPresetInfo={this.getPresetinfo}/>
-                ) : (
-                    <p>You have no presets at the moment</p>
-                )}
+                <Button size="large" target="_blank" onClick={this.togglePresetMenu} >Presets <SvgIcon component={this.state.openPreset[1]} viewBox={'-5 0 25 25'}/>
+                </Button>
+                <Collapse
+                    in={this.state.openPreset[0]}
+                    timeout="auto" 
+                    unmountOnExit
+                >
+                    {this.state.presets.length ? (
+                        <PresetList presets={this.state.presets} getPresetInfo={this.getPresetinfo}/>
+                    ) : (
+                        <p>You have no presets at the moment</p>
+                    )}
+                </Collapse>
             </div>
         )}
       }
